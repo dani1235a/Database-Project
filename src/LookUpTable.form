@@ -7,10 +7,10 @@
     <properties/>
     <border type="none"/>
     <children>
-      <component id="5770d" class="javax.swing.JButton" binding="doneButton" default-binding="true">
+      <component id="5770d" class="javax.swing.JButton" binding="backButton" default-binding="true">
         <constraints border-constraint="South"/>
         <properties>
-          <text value="Done"/>
+          <text value="Back"/>
         </properties>
       </component>
       <component id="31c21" class="javax.swing.JTable" binding="table1" default-binding="true">

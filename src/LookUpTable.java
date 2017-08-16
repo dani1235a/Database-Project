@@ -5,7 +5,7 @@ import javax.swing.*;
  */
 public class LookUpTable {
     private JPanel panel1;
-    private JButton doneButton;
+    private JButton backButton;
     private JTable table1;
 
     private void createUIComponents() {
