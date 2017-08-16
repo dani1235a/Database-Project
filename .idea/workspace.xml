@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bfc1442a-1288-4be5-b495-6f9bc5d7211e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Database Project/LookUpTable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Database Project/NewBook$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Database Project/NewBook$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/LookUpTable.form" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/LookUpTable.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Database Project/NewBook.class" afterPath="$PROJECT_DIR$/out/production/Database Project/NewBook.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Diagram_0.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/NewBook.java" afterPath="$PROJECT_DIR$/src/NewBook.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -173,7 +167,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-6" />
+    <option name="x" value="206" />
+    <option name="y" value="113" />
     <option name="width" value="1450" />
     <option name="height" value="936" />
   </component>
@@ -233,6 +228,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Daniel\IdeaProjects\Database Project\src" />
       <recent name="C:\Users\Daniel\IdeaProjects\Database Project\lib" />
     </key>
   </component>
@@ -666,7 +662,7 @@
       <workItem from="1502841671548" duration="40000" />
       <workItem from="1502841867263" duration="1389000" />
       <workItem from="1502845856834" duration="3954000" />
-      <workItem from="1502917489842" duration="7563000" />
+      <workItem from="1502917489842" duration="7606000" />
     </task>
     <task id="LOCAL-00001" summary="Adding a LookUpTable">
       <created>1502845973630</created>
@@ -682,11 +678,18 @@
       <option name="project" value="LOCAL" />
       <updated>1502918686630</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Connected Java code to SQL database.">
+      <created>1502925070040</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1502925070040</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24566000" />
+    <option name="totallyTimeSpent" value="24609000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2182" height="1416" extended-state="6" />
