@@ -24,27 +24,13 @@ public class FindBook {
     private JTextField txtAuthorFirst;
     private JTextField txtInitials;
     private JTextField textField;
-
-    /**
-     * Launch the application.
-     */
-    public static void main(String[] args) {
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                try {
-                    FindBook window = new FindBook();
-                    window.findFrame.setVisible(true);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-    }
+    private SQLConnection connection;
 
     /**
      * Create the application.
      */
-    public FindBook() {
+    public FindBook(SQLConnection connection) {
+        this.connection = connection;
         initialize();
         findFrame.setVisible(true);
     }
@@ -62,7 +48,7 @@ public class FindBook {
         final Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         findFrame.setLocation(dim.width / 2 - findFrame.getSize().width / 2,
                 (int) (dim.getHeight() / 2 - findFrame.getSize().height / 2));
-
+        findFrame.setVisible(true);
         JButton btnSubmit = new JButton("Search");
         btnSubmit.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
