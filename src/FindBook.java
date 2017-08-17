@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
 import java.awt.Toolkit;
+import java.sql.Connection;
 import java.sql.SQLException;
 
 public class FindBook {
@@ -24,12 +25,12 @@ public class FindBook {
     private JTextField txtAuthorFirst;
     private JTextField txtInitials;
     private JTextField textField;
-    private SQLConnection connection;
+    private Connection connection;
 
     /**
      * Create the application.
      */
-    public FindBook(SQLConnection connection) {
+    public FindBook(Connection connection) {
         this.connection = connection;
         initialize();
         findFrame.setVisible(true);

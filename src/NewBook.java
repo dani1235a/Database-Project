@@ -2,6 +2,7 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 
 import javax.swing.*;
+import java.sql.Connection;
 import java.sql.SQLException;
 
 public class NewBook {
@@ -18,11 +19,11 @@ public class NewBook {
     private JTextField txtAuthorFirst;
     private JTextField txtInitials;
     private JTextPane txtpnBookDescription;
-    private JComboBox comboBox;
+    private JComboBox<String> comboBox;
     private ButtonGroup publishers;
 
     //SQLconnection that was established during startup of program.
-    private SQLConnection connection;
+    private Connection connection;
 
     //text field input for book
     private String TitleOfBook;
@@ -51,7 +52,7 @@ public class NewBook {
     /**
      * Create the application.
      */
-    public NewBook(SQLConnection connection) {
+    public NewBook(Connection connection) {
         this.connection = connection;
         initialize();
         newBookFrame.setVisible(true);
@@ -112,7 +113,7 @@ public class NewBook {
             hasDescription = true;
         }
         if (!Genre.equals("<Select Genre>")) {
-            hasGenre = true;
+            hasGenre = false;
         }
     }
 
@@ -126,14 +127,12 @@ public class NewBook {
             //TODO: Make sure all vital information feilds are populated.
             basicBookInfo();
             if (hasTitle && hasISBN && hasAuthorL && hasAuthorF) {
-                Book book = new Book(TitleOfBook, AuthorFirstName, AuthorLastName, Publisher, ISBN);
-                book.setConnection(connection);
+                Book book = new Book(TitleOfBook, AuthorFirstName, AuthorLastName, Publisher, ISBN, connection);
                 if (hasGenre) book.setGenre(Genre);
                 if (hasDescription) book.setBookDescription(Description);
                 if (hasPrice) book.setListPrice(Price);
                 if (hasPublishingDate) book.setDate(PublishingDate);
                 if (hasAuthorI) book.setAuthorInit(AuthorInit);
-
                 book.addToBookStoreDatabase();
             } else {
                 JOptionPane.showMessageDialog(null, "Warning: Not enough Information to create a Book!\n"
@@ -183,9 +182,9 @@ public class NewBook {
      */
     private void addRadioButtons() {
 
-        comboBox = new JComboBox();
+        comboBox = new JComboBox<>();
         comboBox.setToolTipText("Select the Genre");
-        comboBox.setModel(new DefaultComboBoxModel(new String[] {"<Select Genre>", "Fiction", "Non-Fiction",
+        comboBox.setModel(new DefaultComboBoxModel<>(new String[] {"<Select Genre>", "Fiction", "Non-Fiction",
                 "Sci-Fi/Fantacy", "Horror", "Comics/Graphic Novel", "Education", "Biography"}));
         comboBox.setBounds(35, 145, 250, 29);
         newBookFrame.getContentPane().add(comboBox);
@@ -196,7 +195,7 @@ public class NewBook {
         rdbtnPengiun.setSelected(true);
         newBookFrame.getContentPane().add(rdbtnPengiun);
 
-        JRadioButton rdbtnScholastic = new JRadioButton("Schoolastic");
+        JRadioButton rdbtnScholastic = new JRadioButton("Scholastic");
         rdbtnScholastic.setBounds(35, 415, 155, 29);
         newBookFrame.getContentPane().add(rdbtnScholastic);
 

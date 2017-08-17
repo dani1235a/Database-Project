@@ -66,7 +66,7 @@ public class Gui {
         JButton btnLookUp = new JButton("Find");
         btnLookUp.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                FindBook find = new FindBook(sqlConnection);
+                FindBook find = new FindBook(connection);
                 Startup.dispose();
             }
         });
@@ -83,7 +83,7 @@ public class Gui {
             public void actionPerformed(ActionEvent arg0) {
                 // OPen new BOok Window
 
-                NewBook book = new NewBook(sqlConnection);
+                NewBook book = new NewBook(connection);
                 Startup.dispose();
             }
         });

@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bfc1442a-1288-4be5-b495-6f9bc5d7211e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Book.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Diagram_0.txt" afterPath="$PROJECT_DIR$/Other/Diagram_0.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/2fdf7cb9-5e64-49df-a948-4911174bd3b6/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/2fdf7cb9-5e64-49df-a948-4911174bd3b6/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/2fdf7cb9-5e64-49df-a948-4911174bd3b6/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/2fdf7cb9-5e64-49df-a948-4911174bd3b6/_metadata_/metadata.values.at" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/2fdf7cb9-5e64-49df-a948-4911174bd3b6/_src_/database/BookStore/schema/dbo.zip" afterPath="$PROJECT_DIR$/.idea/dataSources/2fdf7cb9-5e64-49df-a948-4911174bd3b6/_src_/database/BookStore/schema/dbo.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Database Project/FindBook$1.class" afterPath="$PROJECT_DIR$/out/production/Database Project/FindBook$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Database Project/FindBook$2.class" afterPath="$PROJECT_DIR$/out/production/Database Project/FindBook$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Database Project/FindBook.class" afterPath="$PROJECT_DIR$/out/production/Database Project/FindBook.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Database Project/Gui$1.class" afterPath="$PROJECT_DIR$/out/production/Database Project/Gui$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Database Project/Gui$2.class" afterPath="$PROJECT_DIR$/out/production/Database Project/Gui$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Database Project/Gui.class" afterPath="$PROJECT_DIR$/out/production/Database Project/Gui.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Database Project/NewBook.class" afterPath="$PROJECT_DIR$/out/production/Database Project/NewBook.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/2fdf7cb9-5e64-49df-a948-4911174bd3b6.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/2fdf7cb9-5e64-49df-a948-4911174bd3b6.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Book.java" afterPath="$PROJECT_DIR$/src/Book.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FindBook.java" afterPath="$PROJECT_DIR$/src/FindBook.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gui.java" afterPath="$PROJECT_DIR$/src/Gui.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/NewBook.java" afterPath="$PROJECT_DIR$/src/NewBook.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SQLConnection.java" afterPath="$PROJECT_DIR$/src/SQLConnection.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,64 +59,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="NewBook.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/NewBook.java">
+      <file leaf-file-name="Gui.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Gui.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-20">
-              <caret line="111" column="14" lean-forward="false" selection-start-line="111" selection-start-column="14" selection-end-line="111" selection-end-column="14" />
+            <state relative-caret-position="523">
+              <caret line="98" column="48" lean-forward="true" selection-start-line="98" selection-start-column="48" selection-end-line="98" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Book.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NewBook.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/NewBook.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-5477">
+              <caret line="132" column="46" lean-forward="false" selection-start-line="132" selection-start-column="46" selection-end-line="132" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Book.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Book.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="605">
-              <caret line="300" column="43" lean-forward="true" selection-start-line="300" selection-start-column="43" selection-end-line="300" selection-end-column="43" />
+            <state relative-caret-position="423">
+              <caret line="339" column="57" lean-forward="false" selection-start-line="339" selection-start-column="57" selection-end-line="339" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3220#3221#0" expanded="true" />
-                <element signature="e#3248#3249#0" expanded="true" />
-                <element signature="e#3343#3344#0" expanded="true" />
-                <element signature="e#3377#3378#0" expanded="true" />
-                <element signature="e#3462#3463#0" expanded="true" />
-                <element signature="e#3496#3497#0" expanded="true" />
-                <element signature="e#3615#3616#0" expanded="true" />
-                <element signature="e#3661#3662#0" expanded="true" />
-                <element signature="e#3744#3745#0" expanded="true" />
-                <element signature="e#3777#3778#0" expanded="true" />
-                <element signature="e#3892#3893#0" expanded="true" />
-                <element signature="e#3936#3937#0" expanded="true" />
-                <element signature="e#4019#4020#0" expanded="true" />
-                <element signature="e#4052#4053#0" expanded="true" />
-                <element signature="e#4160#4161#0" expanded="true" />
-                <element signature="e#4204#4205#0" expanded="true" />
-                <element signature="e#4285#4286#0" expanded="true" />
-                <element signature="e#4317#4318#0" expanded="true" />
-                <element signature="e#4428#4429#0" expanded="true" />
-                <element signature="e#4470#4471#0" expanded="true" />
-                <element signature="e#4564#4565#0" expanded="true" />
-                <element signature="e#4597#4598#0" expanded="true" />
-                <element signature="e#4723#4724#0" expanded="true" />
-                <element signature="e#4767#4768#0" expanded="true" />
-                <element signature="e#4848#4849#0" expanded="true" />
-                <element signature="e#4880#4881#0" expanded="true" />
-                <element signature="e#5175#5176#0" expanded="true" />
-                <element signature="e#5213#5214#0" expanded="true" />
-                <element signature="e#5348#5349#0" expanded="true" />
-                <element signature="e#5402#5403#0" expanded="true" />
-                <element signature="e#5473#5474#0" expanded="true" />
-                <element signature="e#5500#5501#0" expanded="true" />
-                <element signature="e#5591#5592#0" expanded="true" />
-                <element signature="e#5618#5619#0" expanded="true" />
-                <element signature="e#5689#5690#0" expanded="true" />
-                <element signature="e#5716#5717#0" expanded="true" />
-                <element signature="e#6344#6345#0" expanded="true" />
-                <element signature="e#6372#6373#0" expanded="true" />
-                <marker date="1502938716992" expanded="true" signature="2124:2188" ph="SELECT Autho... Author" />
-                <marker date="1502938716992" expanded="true" signature="2510:2602" ph="insert into Author... " />
-                <marker date="1502938716992" expanded="true" signature="7579:7712" ph="insert into Book... " />
+                <marker date="1503009454033" expanded="true" signature="2299:2363" ph="SELECT Autho... Author" />
+                <marker date="1503009454033" expanded="true" signature="2405:2486" ph="SELECT Autho... Author" />
+                <marker date="1503009454033" expanded="true" signature="2989:3081" ph="insert into Author... " />
+                <marker date="1503009454033" expanded="true" signature="8382:8515" ph="insert into Book... " />
+                <marker date="1503009454033" expanded="true" signature="9653:9691" ph="Select BookI... Book" />
               </folding>
             </state>
           </provider>
@@ -130,14 +105,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FindBook.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FindBook.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="28" column="7" lean-forward="false" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+      <file leaf-file-name="Author" pinned="false" current-in-tab="false">
+        <entry file="das://table:/17989fb/2fdf7cb9-5e64-49df-a948-4911174bd3b6/BookStore.dbo.Author">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -169,12 +141,13 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/47a81382-7215-4c20-86ad-744411e1bbb2/console.sql" />
         <option value="dbtable:/17989fb/2fdf7cb9-5e64-49df-a948-4911174bd3b6/BookStore.dbo.Book" />
         <option value="$PROJECT_DIR$/src/LookUpTable.form" />
-        <option value="$PROJECT_DIR$/src/FindBook.java" />
-        <option value="$PROJECT_DIR$/src/NewBook.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/2fdf7cb9-5e64-49df-a948-4911174bd3b6/console.sql" />
         <option value="$PROJECT_DIR$/src/SQLConnection.java" />
-        <option value="$PROJECT_DIR$/src/Gui.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/2fdf7cb9-5e64-49df-a948-4911174bd3b6/console_3.sql" />
+        <option value="$PROJECT_DIR$/src/Gui.java" />
+        <option value="$PROJECT_DIR$/src/FindBook.java" />
+        <option value="$USER_HOME$/Downloads/Microsoft JDBC Driver 6.0 for SQL Server/sqljdbc_6.0/enu/jre8/sqljdbc42.jar!/com/microsoft/sqlserver/jdbc/SQLServerConnection.class" />
+        <option value="$PROJECT_DIR$/src/NewBook.java" />
         <option value="$PROJECT_DIR$/src/Book.java" />
       </list>
     </option>
@@ -207,7 +180,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -235,6 +207,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -688,7 +661,12 @@
       <workItem from="1502841867263" duration="1389000" />
       <workItem from="1502845856834" duration="3954000" />
       <workItem from="1502917489842" duration="7703000" />
-      <workItem from="1502930420332" duration="8561000" />
+      <workItem from="1502930420332" duration="10834000" />
+      <workItem from="1502996369510" duration="292000" />
+      <workItem from="1502996721012" duration="14000" />
+      <workItem from="1502996786596" duration="2262000" />
+      <workItem from="1502999119653" duration="938000" />
+      <workItem from="1503000123201" duration="5694000" />
     </task>
     <task id="LOCAL-00001" summary="Adding a LookUpTable">
       <created>1502845973630</created>
@@ -718,17 +696,24 @@
       <option name="project" value="LOCAL" />
       <updated>1502925110747</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Trying to add a book to database.">
+      <created>1502939311487</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1502939311487</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33267000" />
+    <option name="totallyTimeSpent" value="44740000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2182" height="1416" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985553" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -736,29 +721,29 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13162118" sideWeight="0.50185186" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13964687" sideWeight="0.49814814" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18619582" sideWeight="0.49814814" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985553" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3130016" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14305556" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14351852" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985553" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39967898" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39967898" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
-      <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985553" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="combo" />
+      <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992566" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3130016" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985553" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -770,21 +755,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adding a LookUpTable" />
     <MESSAGE value="Connected Java code to SQL database." />
-    <option name="LAST_COMMIT_MESSAGE" value="Connected Java code to SQL database." />
+    <MESSAGE value="Trying to add a book to database." />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to add a book to database." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Book.java</url>
-          <line>45</line>
-          <properties class="Book" method="&lt;init&gt;">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -793,22 +769,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/LookUpTable.java" />
-    <entry file="file://$PROJECT_DIR$/src/Gui.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2fdf7cb9-5e64-49df-a948-4911174bd3b6/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
           <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -817,7 +781,7 @@
         <state relative-caret-position="900">
           <caret line="36" column="39" lean-forward="false" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -826,9 +790,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -836,7 +798,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
           <caret line="13" column="37" lean-forward="true" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -845,7 +806,7 @@
         <state relative-caret-position="900">
           <caret line="36" column="39" lean-forward="true" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -854,9 +815,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -869,7 +828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -969,16 +927,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FindBook.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="28" column="7" lean-forward="false" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LookUpTable.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/awt/event/ActionListener.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1014,23 +962,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Gui.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1850">
-          <caret line="76" column="7" lean-forward="true" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/17989fb/2fdf7cb9-5e64-49df-a948-4911174bd3b6/BookStore.dbo.Genre">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/17989fb/2fdf7cb9-5e64-49df-a948-4911174bd3b6/BookStore.dbo.Publisher">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1042,26 +973,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SQLConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="22" column="35" lean-forward="true" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#666#667#0" expanded="true" />
-            <element signature="e#701#702#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/17989fb/2fdf7cb9-5e64-49df-a948-4911174bd3b6/BookStore.dbo.Book">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1069,7 +980,49 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Other/Diagram_0.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="19" column="38" lean-forward="true" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SQLConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+          <folding>
+            <element signature="e#666#667#0" expanded="false" />
+            <element signature="e#701#702#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/Microsoft JDBC Driver 6.0 for SQL Server/sqljdbc_6.0/enu/jre8/sqljdbc42.jar!/com/microsoft/sqlserver/jdbc/SQLServerConnection.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1750" column="0" lean-forward="false" selection-start-line="1750" selection-start-column="0" selection-end-line="1750" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FindBook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/17989fb/2fdf7cb9-5e64-49df-a948-4911174bd3b6/BookStore.dbo.Genre">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1080,62 +1033,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://table:/17989fb/2fdf7cb9-5e64-49df-a948-4911174bd3b6/BookStore.dbo.Book">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/NewBook.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20">
-          <caret line="111" column="14" lean-forward="false" selection-start-line="111" selection-start-column="14" selection-end-line="111" selection-end-column="14" />
+        <state relative-caret-position="-5477">
+          <caret line="132" column="46" lean-forward="false" selection-start-line="132" selection-start-column="46" selection-end-line="132" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Book.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="300" column="43" lean-forward="true" selection-start-line="300" selection-start-column="43" selection-end-line="300" selection-end-column="43" />
+        <state relative-caret-position="423">
+          <caret line="339" column="57" lean-forward="false" selection-start-line="339" selection-start-column="57" selection-end-line="339" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3220#3221#0" expanded="true" />
-            <element signature="e#3248#3249#0" expanded="true" />
-            <element signature="e#3343#3344#0" expanded="true" />
-            <element signature="e#3377#3378#0" expanded="true" />
-            <element signature="e#3462#3463#0" expanded="true" />
-            <element signature="e#3496#3497#0" expanded="true" />
-            <element signature="e#3615#3616#0" expanded="true" />
-            <element signature="e#3661#3662#0" expanded="true" />
-            <element signature="e#3744#3745#0" expanded="true" />
-            <element signature="e#3777#3778#0" expanded="true" />
-            <element signature="e#3892#3893#0" expanded="true" />
-            <element signature="e#3936#3937#0" expanded="true" />
-            <element signature="e#4019#4020#0" expanded="true" />
-            <element signature="e#4052#4053#0" expanded="true" />
-            <element signature="e#4160#4161#0" expanded="true" />
-            <element signature="e#4204#4205#0" expanded="true" />
-            <element signature="e#4285#4286#0" expanded="true" />
-            <element signature="e#4317#4318#0" expanded="true" />
-            <element signature="e#4428#4429#0" expanded="true" />
-            <element signature="e#4470#4471#0" expanded="true" />
-            <element signature="e#4564#4565#0" expanded="true" />
-            <element signature="e#4597#4598#0" expanded="true" />
-            <element signature="e#4723#4724#0" expanded="true" />
-            <element signature="e#4767#4768#0" expanded="true" />
-            <element signature="e#4848#4849#0" expanded="true" />
-            <element signature="e#4880#4881#0" expanded="true" />
-            <element signature="e#5175#5176#0" expanded="true" />
-            <element signature="e#5213#5214#0" expanded="true" />
-            <element signature="e#5348#5349#0" expanded="true" />
-            <element signature="e#5402#5403#0" expanded="true" />
-            <element signature="e#5473#5474#0" expanded="true" />
-            <element signature="e#5500#5501#0" expanded="true" />
-            <element signature="e#5591#5592#0" expanded="true" />
-            <element signature="e#5618#5619#0" expanded="true" />
-            <element signature="e#5689#5690#0" expanded="true" />
-            <element signature="e#5716#5717#0" expanded="true" />
-            <element signature="e#6344#6345#0" expanded="true" />
-            <element signature="e#6372#6373#0" expanded="true" />
-            <marker date="1502938716992" expanded="true" signature="2124:2188" ph="SELECT Autho... Author" />
-            <marker date="1502938716992" expanded="true" signature="2510:2602" ph="insert into Author... " />
-            <marker date="1502938716992" expanded="true" signature="7579:7712" ph="insert into Book... " />
+            <marker date="1503009454033" expanded="true" signature="2299:2363" ph="SELECT Autho... Author" />
+            <marker date="1503009454033" expanded="true" signature="2405:2486" ph="SELECT Autho... Author" />
+            <marker date="1503009454033" expanded="true" signature="2989:3081" ph="insert into Author... " />
+            <marker date="1503009454033" expanded="true" signature="8382:8515" ph="insert into Book... " />
+            <marker date="1503009454033" expanded="true" signature="9653:9691" ph="Select BookI... Book" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Gui.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="98" column="48" lean-forward="true" selection-start-line="98" selection-start-column="48" selection-end-line="98" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>

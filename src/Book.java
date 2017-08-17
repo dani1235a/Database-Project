@@ -1,3 +1,5 @@
+import com.microsoft.sqlserver.jdbc.SQLServerException;
+
 import javax.swing.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -14,7 +16,6 @@ import java.util.Date;
  */
 public class Book {
     //SQL connection to add book to database
-    private SQLConnection SQLClassConnection;
     private Connection connection;
 
     // Book essentials
@@ -29,12 +30,13 @@ public class Book {
     private String ISBN;
     private String date;
     private String Genre;
-    private int GenreID;
+    // GenreID = 8 is default, (null)
+    private int GenreID = 8;
     private java.sql.Date publishDate;
     private int PublisherID;
     private float ListPrice;
     private int AuthorID;
-
+    private Boolean AuthorInit = false;
     /**
      * Book constructor.
      * @param Title
@@ -44,16 +46,17 @@ public class Book {
      * @param ISBN
      */
     public Book(String Title, String AuthorFirst, String AuthorLast,
-                String Publisher, String ISBN) {
+                String Publisher, String ISBN, Connection connection) {
         this.ISBN = ISBN;
         this.publisher = Publisher;
         this.title = Title;
         this.authorFirst = AuthorFirst;
         this.authorLast = AuthorLast;
+        this.connection = connection;
 
         if (publisher.equals("Pengiun")) {
             PublisherID = 1;
-        } else if (publisher.equals("Schoolastic")) {
+        } else if (publisher.equals("Scholastic")) {
             PublisherID = 2;
         } else if (publisher.equals("Pearson")) {
             PublisherID = 3;
@@ -61,41 +64,61 @@ public class Book {
             PublisherID = 5;
         }
 
-        getAuthorID();
-
     }
 
     private void getAuthorID() {
         //TODO: 1) search for author id with first name, and last name - if found, assign to author ID
         //TODO: 2) if not found, create a new Author with given first and last name and then repeat process to get ID
         //TODO: worry about inital in author name
-        String search = "SELECT AuthorID from Author where FirstName = ? and LastName = ?";
+        String search;
+        if (!AuthorInit) {
+            search = "SELECT AuthorID FROM Author WHERE FirstName = ? AND LastName = ?";
+        } else {
+            search = "SELECT AuthorID FROM Author WHERE FirstName = ? AND LastName = ? AND Initials = ?";
+        }
         try {
             PreparedStatement searchSQL = connection.prepareStatement(search);
             searchSQL.setString(1, authorFirst);
             searchSQL.setString(2, authorLast);
+            if (AuthorInit) {
+                searchSQL.setString(3, authorInit);
+            }
+
 
             ResultSet result = searchSQL.executeQuery();
 
-            if (!result.next()) {
-                String addAuthor = "insert into Author(FirstName, LastName, Initials) " +
-                        "values(?,?,?)";
+            if (result.next()) {
+                AuthorID = result.getInt("AuthorID");
+            } else {
+                String addAuthor = "INSERT INTO Author(FirstName, LastName, Initials) " +
+                        "VALUES(?,?,?)";
                 PreparedStatement addAnAuthor = connection.prepareStatement(addAuthor);
                 addAnAuthor.setString(1, authorFirst);
                 addAnAuthor.setString(2, authorLast);
                 addAnAuthor.setString(3, authorInit);
+                addAnAuthor.execute();
 
-                ResultSet result2 = searchSQL.executeQuery();
-                AuthorID = result2.getInt("AuthorID");
-            } else {
-                AuthorID = result.getInt("AuthorID");
+
+                PreparedStatement searchNewAuthor = connection.prepareStatement(search);
+                searchNewAuthor.setString(1, authorFirst);
+                searchNewAuthor.setString(2, authorLast);
+                if (AuthorInit) {
+                    searchNewAuthor.setString(3, authorInit);
+                }
+
+                ResultSet result2 = searchNewAuthor.executeQuery();
+                if (result2.next()) {
+                    AuthorID = result2.getInt("AuthorID");
+                    System.out.println(result2);
+                } else {
+                    System.out.println("Error couldnt create author");
+                }
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+                e.printStackTrace();
         }
-
-
     }
+
 
     /**
      * @return the title
@@ -147,10 +170,16 @@ public class Book {
     }
 
     /**
-     * @param authorInit the authorInit to set
+     * @param authorInitials the authorInit to set
      */
-    void setAuthorInit(String authorInit) {
-        this.authorInit = authorInit;
+    void setAuthorInit(String authorInitials) {
+        this.authorInit = authorInitials;
+
+        if (authorInit.equals("") || authorInit == null) {
+            AuthorInit = false;
+        } else {
+            AuthorInit = true;
+        }
     }
 
     /**
@@ -165,13 +194,6 @@ public class Book {
      */
     public void setPublisher(String publisher) {
         this.publisher = publisher;
-    }
-
-    /**
-     * @return the bookstores
-     */
-    public ArrayList<String> getBookstores() {
-        return bookstores;
     }
 
     /**
@@ -277,18 +299,11 @@ public class Book {
             GenreID = 6;
         } else if (Genre.equals("Biography")) {
             GenreID = 5;
+        } else {
+            GenreID = 8;
         }
     }
 
-
-    /**
-     * Sets the SQL connection with the book.
-     * @param connectionToClass
-     */
-    public void setConnection(SQLConnection connectionToClass) {
-        this.SQLClassConnection = connectionToClass;
-        connection = SQLClassConnection.getConnection();
-    }
 
     /**
      * adds the book to the database.
@@ -297,6 +312,7 @@ public class Book {
         if (connection == null) {
             JOptionPane.showMessageDialog(null, "Warning: SQL Connection not Established.");
         }
+        getAuthorID();
         String query = "insert into Book (BookTitle, ISBN, GenreID, ReleaseDate, PublisherID, ListPrice, AuthorID)"
                  + "values(?,?,?,?,?,?,?)";
 
@@ -304,14 +320,45 @@ public class Book {
             PreparedStatement s = connection.prepareStatement(query);
             s.setString(1, title);
             s.setString(2, ISBN);
-            s.setInt(3, GenreID);
+            if (GenreID != 8) {
+                s.setInt(3, GenreID);
+            } else {
+                s.setString(3, null);
+            }
             s.setDate(4, publishDate);
             s.setInt(5, PublisherID);
             s.setFloat(6, ListPrice);
             s.setInt(7, AuthorID);
 
+            s.execute();
+
+            String BookID = getBookID();
+            JOptionPane.showMessageDialog(null, "Success! The book was added to the Database!\n" +
+                                            "The BookID is: " + BookID);
+
+        } catch (SQLServerException e1) {
+            JOptionPane.showMessageDialog(null, "Warning: Cannot add book to database! \n" +
+                                        "A book with this ISBN already Exists!\n Unique ISBN required!");
+            //e1.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    private String getBookID() {
+        String BookID = "";
+        String query = "Select BookID from Book where ISBN = ?";
+        try {
+            PreparedStatement findBook = connection.prepareStatement(query);
+            findBook.setString(1,ISBN);
+            ResultSet foundBook = findBook.executeQuery();
+            if(foundBook.next()) {
+               BookID =  foundBook.getString("BookID");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return BookID;
     }
 }
