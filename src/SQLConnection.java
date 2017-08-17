@@ -19,4 +19,9 @@ public class SQLConnection {
             e.printStackTrace();
         }
     }
+
+    public Connection getConnection() {
+        return myConnection;
+    }
+
 }

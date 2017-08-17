@@ -1,22 +1,14 @@
 import java.awt.Dimension;
 import java.awt.Toolkit;
 
-import javax.swing.JFrame;
-import javax.swing.ButtonGroup;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.JCheckBox;
-import javax.swing.JRadioButton;
-import javax.swing.JTextPane;
+import javax.swing.*;
 import java.sql.SQLException;
-import javax.swing.JComboBox;
-import javax.swing.DefaultComboBoxModel;
 
 public class NewBook {
 
     //Jframe
     private JFrame newBookFrame;
+
     //Text Feilds for info
     private JTextField txtTitle;
     private JTextField txtAuthor;
@@ -28,8 +20,10 @@ public class NewBook {
     private JTextPane txtpnBookDescription;
     private JComboBox comboBox;
     private ButtonGroup publishers;
+
     //SQLconnection that was established during startup of program.
     private SQLConnection connection;
+
     //text field input for book
     private String TitleOfBook;
     private String AuthorFirstName;
@@ -41,6 +35,17 @@ public class NewBook {
     private String Description;
     private String Publisher;
     private String Genre;
+
+    //booleans for fields
+    private Boolean hasTitle = false;
+    private Boolean hasAuthorF = false;
+    private Boolean hasAuthorL = false;
+    private Boolean hasAuthorI = false;
+    private Boolean hasISBN = false;
+    private Boolean hasPublishingDate = false;
+    private Boolean hasPrice = false;
+    private Boolean hasDescription = false;
+    private Boolean hasGenre = false;
 
 
     /**
@@ -81,6 +86,34 @@ public class NewBook {
         Publisher = publishers.getSelection().getActionCommand();
         Description = txtpnBookDescription.getText();
         Genre = comboBox.getSelectedItem().toString();
+
+        if (!TitleOfBook.equals("")) {
+            hasTitle = true;
+        }
+        if (!AuthorLastName.equals("")) {
+            hasAuthorL = true;
+        }
+        if (!AuthorFirstName.equals("")) {
+            hasAuthorF = true;
+        }
+        if(!AuthorInit.equals("")) {
+            hasAuthorI = true;
+        }
+        if (!PublishingDate.equals("")) {
+            hasPublishingDate = true;
+        }
+        if (!ISBN.equals("")) {
+            hasISBN = true;
+        }
+        if (!Price.equals("")) {
+            hasPrice = true;
+        }
+        if (!Description.equals("")) {
+            hasDescription = true;
+        }
+        if (!Genre.equals("<Select Genre>")) {
+            hasGenre = true;
+        }
     }
 
     /**
@@ -89,11 +122,26 @@ public class NewBook {
     private void addSubmitButton() {
         JButton btnSubmit = new JButton("Submit");
         btnSubmit.addActionListener(arg0 -> {
-            //TODO: Have prompt say "Success!" or "Failure/MIssing Information!" if it works or doesnt
-                //TODO: Make sure all vital information feilds are populated.
+            //TODO: Have prompt say "Success!" or "Failure/Missing Information!" if it works or doesnt
+            //TODO: Make sure all vital information feilds are populated.
+            basicBookInfo();
+            if (hasTitle && hasISBN && hasAuthorL && hasAuthorF) {
+                Book book = new Book(TitleOfBook, AuthorFirstName, AuthorLastName, Publisher, ISBN);
+                book.setConnection(connection);
+                if (hasGenre) book.setGenre(Genre);
+                if (hasDescription) book.setBookDescription(Description);
+                if (hasPrice) book.setListPrice(Price);
+                if (hasPublishingDate) book.setDate(PublishingDate);
+                if (hasAuthorI) book.setAuthorInit(AuthorInit);
+
+                book.addToBookStoreDatabase();
+            } else {
+                JOptionPane.showMessageDialog(null, "Warning: Not enough Information to create a Book!\n"
+                        + "Please make sure that the Title, Author First Name, Author Last Name, and ISBN have values.");
+            }
             //TODO: write script to add the book into database. - optional we can show bookID
             //TODO: Go to a JTable with just "select * from Books" so they can see the book there.
-            basicBookInfo();
+
 
             System.out.println("Book Title: " + TitleOfBook);
             System.out.println("Author First: " + AuthorFirstName);

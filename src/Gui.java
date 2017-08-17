@@ -5,6 +5,7 @@ import javax.swing.JOptionPane;
 import java.awt.Dimension;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.awt.event.ActionEvent;
 
@@ -13,6 +14,7 @@ import java.awt.event.ActionEvent;
  */
 public class Gui {
     private SQLConnection sqlConnection;
+    private Connection connection;
     private JFrame Startup;
 
     /**
@@ -29,6 +31,7 @@ public class Gui {
     public Gui() throws SQLException {
         sqlConnection = new SQLConnection();
         sqlConnection.startConnection();
+        connection = sqlConnection.getConnection();
         initialize();
         Startup.setVisible(true);
     }
