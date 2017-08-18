@@ -6,6 +6,10 @@ import java.sql.Connection;
  * Class GUI is the main class. Starts off the GUI with Find or NewBook buttons.
  */
 public class Gui {
+    public final static String SandS = "Simon and Schuster";
+    public final static String Scholastic = "Scholastic";
+    public final static String Pearson = "Pearson";
+    public final static String Penguin = "Penguin";
     private final Connection connection;
     private JFrame Startup;
 

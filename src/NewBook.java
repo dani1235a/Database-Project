@@ -1,7 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.sql.Connection;
 
 public class NewBook {
@@ -109,7 +107,7 @@ public class NewBook {
         if (!PublishingDate.equals("")) {
             hasPublishingDate = true;
         }
-        if (!ISBN.equals("")) {
+        if (!(ISBN.equals("") || ISBN == null)) {
             hasISBN = true;
         }
         if (!Price.equals("")) {
@@ -119,7 +117,7 @@ public class NewBook {
             hasDescription = true;
         }
         if (!Genre.equals("<Select Genre>")) {
-            hasGenre = false;
+            hasGenre = true;
         }
     }
 
@@ -141,21 +139,11 @@ public class NewBook {
             } else {
                 JOptionPane.showMessageDialog(null, "Warning: Not enough Information to create a Book!\n"
                         + "Please make sure that the Title, Author First Name, Author Last Name, and ISBN have values.");
+
             }
 
             //TODO: Go to a JTable with just "select * from Books" so they can see the book there.
 
-
-//            System.out.println("Book Title: " + TitleOfBook);
-//            System.out.println("Author First: " + AuthorFirstName);
-//            System.out.println("Author Last: " + AuthorLastName);
-//            System.out.println("Author init: " + AuthorInit);
-//            System.out.println("Publishing date: " + PublishingDate);
-//            System.out.println("Publisher: " + Publisher);
-//            System.out.println("ISBN:" + ISBN);
-//            System.out.println("List Price: " + Price);
-//            System.out.println("Description: " + Description);
-//            System.out.println("Genre: " + Genre);
 
 
         });
@@ -190,20 +178,20 @@ public class NewBook {
         newBookFrame.getContentPane().add(comboBox);
 
         //create radio buttons
-        JRadioButton rdbtnPengiun = new JRadioButton("Pengiun");
+        JRadioButton rdbtnPengiun = new JRadioButton(Gui.Penguin);
         rdbtnPengiun.setBounds(35, 378, 155, 29);
         rdbtnPengiun.setSelected(true);
         newBookFrame.getContentPane().add(rdbtnPengiun);
 
-        JRadioButton rdbtnScholastic = new JRadioButton("Scholastic");
+        JRadioButton rdbtnScholastic = new JRadioButton(Gui.Scholastic);
         rdbtnScholastic.setBounds(35, 415, 155, 29);
         newBookFrame.getContentPane().add(rdbtnScholastic);
 
-        JRadioButton rdbtnPearson = new JRadioButton("Pearson");
+        JRadioButton rdbtnPearson = new JRadioButton(Gui.Pearson);
         rdbtnPearson.setBounds(35, 452, 155, 29);
         newBookFrame.getContentPane().add(rdbtnPearson);
 
-        JRadioButton rdbtnSimonandSchuster = new JRadioButton("Simon and Schuster");
+        JRadioButton rdbtnSimonandSchuster = new JRadioButton(Gui.SandS);
         rdbtnSimonandSchuster.setBounds(35, 489, 188, 29);
         newBookFrame.getContentPane().add(rdbtnSimonandSchuster);
 
@@ -213,10 +201,10 @@ public class NewBook {
         publishers.add(rdbtnPengiun);
         publishers.add(rdbtnSimonandSchuster);
 
-        rdbtnPearson.setActionCommand("Pearson");
-        rdbtnPengiun.setActionCommand("Pengiun");
-        rdbtnScholastic.setActionCommand("Scholastic");
-        rdbtnSimonandSchuster.setActionCommand("SimonAndSchuster");
+        rdbtnPearson.setActionCommand(Gui.Pearson);
+        rdbtnPengiun.setActionCommand(Gui.Penguin);
+        rdbtnScholastic.setActionCommand(Gui.Scholastic);
+        rdbtnSimonandSchuster.setActionCommand(Gui.SandS);
 
         class SelectBookStores{
             private void deselectAll(){

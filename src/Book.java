@@ -54,13 +54,13 @@ public class Book {
         this.authorLast = AuthorLast;
         this.connection = connection;
 
-        if (publisher.equals("Pengiun")) {
+        if (publisher.equals(Gui.Penguin)) {
             PublisherID = 1;
-        } else if (publisher.equals("Scholastic")) {
+        } else if (publisher.equals(Gui.Scholastic)) {
             PublisherID = 2;
-        } else if (publisher.equals("Pearson")) {
+        } else if (publisher.equals(Gui.Pearson)) {
             PublisherID = 3;
-        } else if (publisher.equals("Simon and Schuster")) {
+        } else if (publisher.equals(Gui.SandS)) {
             PublisherID = 5;
         }
 
