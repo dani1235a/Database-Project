@@ -248,10 +248,6 @@ public class FindBook {
 
     protected void initGui() {
         // TODO Auto-generated method stub
-        try {
-            Gui initalWindow = new Gui();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        new Gui();
     }
 }

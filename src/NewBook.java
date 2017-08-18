@@ -1,15 +1,15 @@
-import java.awt.Dimension;
-import java.awt.Toolkit;
-
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.Connection;
-import java.sql.SQLException;
 
 public class NewBook {
 
+    //SQLconnection that was established during startup of program.
+    private final Connection connection;
     //Jframe
     private JFrame newBookFrame;
-
     //Text Feilds for info
     private JTextField txtTitle;
     private JTextField txtAuthor;
@@ -21,10 +21,15 @@ public class NewBook {
     private JTextPane txtpnBookDescription;
     private JComboBox<String> comboBox;
     private ButtonGroup publishers;
-
-    //SQLconnection that was established during startup of program.
-    private Connection connection;
-
+    //Add checkBoxes (Bookstores) as fields
+    private JCheckBox chckbxBarnsAndNoble;
+    private JCheckBox chckbxAmazon;
+    private JCheckBox chckbxBorders;
+    private JCheckBox chckbxHalfPriceBooks;
+    private JCheckBox chckbxPowells;
+    private JCheckBox chckbxUwBookStore;
+    private JCheckBox chckbxPluBookStore;
+    private JCheckBox chckbxUpsBookStore;
     //text field input for book
     private String TitleOfBook;
     private String AuthorFirstName;
@@ -86,6 +91,7 @@ public class NewBook {
         Price = txtPrice.getText();
         Publisher = publishers.getSelection().getActionCommand();
         Description = txtpnBookDescription.getText();
+        //noinspection ConstantConditions
         Genre = comboBox.getSelectedItem().toString();
 
         if (!TitleOfBook.equals("")) {
@@ -97,7 +103,7 @@ public class NewBook {
         if (!AuthorFirstName.equals("")) {
             hasAuthorF = true;
         }
-        if(!AuthorInit.equals("")) {
+        if (!AuthorInit.equals("")) {
             hasAuthorI = true;
         }
         if (!PublishingDate.equals("")) {
@@ -123,8 +129,6 @@ public class NewBook {
     private void addSubmitButton() {
         JButton btnSubmit = new JButton("Submit");
         btnSubmit.addActionListener(arg0 -> {
-            //TODO: Have prompt say "Success!" or "Failure/Missing Information!" if it works or doesnt
-            //TODO: Make sure all vital information feilds are populated.
             basicBookInfo();
             if (hasTitle && hasISBN && hasAuthorL && hasAuthorF) {
                 Book book = new Book(TitleOfBook, AuthorFirstName, AuthorLastName, Publisher, ISBN, connection);
@@ -138,20 +142,20 @@ public class NewBook {
                 JOptionPane.showMessageDialog(null, "Warning: Not enough Information to create a Book!\n"
                         + "Please make sure that the Title, Author First Name, Author Last Name, and ISBN have values.");
             }
-            //TODO: write script to add the book into database. - optional we can show bookID
+
             //TODO: Go to a JTable with just "select * from Books" so they can see the book there.
 
 
-            System.out.println("Book Title: " + TitleOfBook);
-            System.out.println("Author First: " + AuthorFirstName);
-            System.out.println("Author Last: " + AuthorLastName);
-            System.out.println("Author init: " + AuthorInit);
-            System.out.println("Publishing date: " + PublishingDate);
-            System.out.println("Publisher: " + Publisher);
-            System.out.println("ISBN:" + ISBN);
-            System.out.println("List Price: " + Price);
-            System.out.println("Description: " + Description);
-            System.out.println("Genre: " + Genre);
+//            System.out.println("Book Title: " + TitleOfBook);
+//            System.out.println("Author First: " + AuthorFirstName);
+//            System.out.println("Author Last: " + AuthorLastName);
+//            System.out.println("Author init: " + AuthorInit);
+//            System.out.println("Publishing date: " + PublishingDate);
+//            System.out.println("Publisher: " + Publisher);
+//            System.out.println("ISBN:" + ISBN);
+//            System.out.println("List Price: " + Price);
+//            System.out.println("Description: " + Description);
+//            System.out.println("Genre: " + Genre);
 
 
         });
@@ -165,11 +169,7 @@ public class NewBook {
     private void addCancelButton() {
         JButton btnCancel = new JButton("Cancel");
         btnCancel.addActionListener(e -> {
-            try {
-                Gui back = new Gui();
-            } catch (SQLException e1) {
-                e1.printStackTrace();
-            }
+            new Gui();
             newBookFrame.dispose();
         });
         btnCancel.setBounds(79, 709, 115, 29);
@@ -184,7 +184,7 @@ public class NewBook {
 
         comboBox = new JComboBox<>();
         comboBox.setToolTipText("Select the Genre");
-        comboBox.setModel(new DefaultComboBoxModel<>(new String[] {"<Select Genre>", "Fiction", "Non-Fiction",
+        comboBox.setModel(new DefaultComboBoxModel<>(new String[]{"<Select Genre>", "Fiction", "Non-Fiction",
                 "Sci-Fi/Fantacy", "Horror", "Comics/Graphic Novel", "Education", "Biography"}));
         comboBox.setBounds(35, 145, 250, 29);
         newBookFrame.getContentPane().add(comboBox);
@@ -217,6 +217,58 @@ public class NewBook {
         rdbtnPengiun.setActionCommand("Pengiun");
         rdbtnScholastic.setActionCommand("Scholastic");
         rdbtnSimonandSchuster.setActionCommand("SimonAndSchuster");
+
+        class SelectBookStores{
+            private void deselectAll(){
+                chckbxAmazon.setSelected(false);
+                chckbxBarnsAndNoble.setSelected(false);
+                chckbxBorders.setSelected(false);
+                chckbxHalfPriceBooks.setSelected(false);
+                chckbxPluBookStore.setSelected(false);
+                chckbxPowells.setSelected(false);
+                chckbxUpsBookStore.setSelected(false);
+                chckbxUwBookStore.setSelected(false);
+            }
+            public void setPenguin(){
+                deselectAll();
+                chckbxBarnsAndNoble.setSelected(true);
+                chckbxBorders.setSelected(true);
+                chckbxHalfPriceBooks.setSelected(true);
+                chckbxPowells.setSelected(true);
+            }
+            public void setScholastic() {
+                deselectAll();
+                chckbxAmazon.setSelected(true);
+                chckbxBarnsAndNoble.setSelected(true);
+                chckbxBorders.setSelected(true);
+            }
+            public void setPearson(){
+                deselectAll();
+                chckbxPluBookStore.setSelected(true);
+                chckbxUpsBookStore.setSelected(true);
+                chckbxUwBookStore.setSelected(true);
+            }
+            public void setSimonAndSchuster() {
+                deselectAll();
+                chckbxHalfPriceBooks.setSelected(true);
+                chckbxPowells.setSelected(true);
+                chckbxUwBookStore.setSelected(true);
+            }
+        }
+        SelectBookStores BookStores = new SelectBookStores();
+        rdbtnPearson.addActionListener(e -> {
+            BookStores.setPearson();
+        });
+        rdbtnPengiun.addActionListener(e -> {
+            BookStores.setPenguin();
+        });
+        rdbtnScholastic.addActionListener(e -> {
+            BookStores.setScholastic();
+        });
+        rdbtnSimonandSchuster.addActionListener(e -> {
+            BookStores.setSimonAndSchuster();
+        });
+
     }
 
     /**
@@ -225,45 +277,50 @@ public class NewBook {
     private void addBookStores() {
 
         // create greyed out checkBoxed
-        JCheckBox chckbxBarnsAndNoble = new JCheckBox("Barns and Noble");
+        chckbxBarnsAndNoble = new JCheckBox("Barns and Noble");
         chckbxBarnsAndNoble.setBounds(35, 580, 170, 29);
         chckbxBarnsAndNoble.setEnabled(false);
+        chckbxBarnsAndNoble.setSelected(true);
         newBookFrame.getContentPane().add(chckbxBarnsAndNoble);
 
-        JCheckBox chckbxAmazon = new JCheckBox("Amazon");
+        chckbxAmazon = new JCheckBox("Amazon");
         chckbxAmazon.setBounds(35, 622, 139, 29);
         chckbxAmazon.setEnabled(false);
         newBookFrame.getContentPane().add(chckbxAmazon);
 
-        JCheckBox chckbxBorders = new JCheckBox("Borders");
+        chckbxBorders = new JCheckBox("Borders");
         chckbxBorders.setBounds(286, 580, 139, 29);
         chckbxBorders.setEnabled(false);
+        chckbxBorders.setSelected(true);
         newBookFrame.getContentPane().add(chckbxBorders);
 
-        JCheckBox chckbxHalfPriceBookvb = new JCheckBox("Half Price Books");
-        chckbxHalfPriceBookvb.setBounds(286, 622, 183, 29);
-        chckbxHalfPriceBookvb.setEnabled(false);
-        newBookFrame.getContentPane().add(chckbxHalfPriceBookvb);
+        chckbxHalfPriceBooks = new JCheckBox("Half Price Books");
+        chckbxHalfPriceBooks.setBounds(286, 622, 183, 29);
+        chckbxHalfPriceBooks.setEnabled(false);
+        chckbxHalfPriceBooks.setSelected(true);
+        newBookFrame.getContentPane().add(chckbxHalfPriceBooks);
 
-        JCheckBox chckbxPowells = new JCheckBox("Powells");
+        chckbxPowells = new JCheckBox("Powells");
         chckbxPowells.setBounds(539, 580, 139, 29);
         chckbxPowells.setEnabled(false);
+        chckbxPowells.setSelected(true);
         newBookFrame.getContentPane().add(chckbxPowells);
 
-        JCheckBox chckbxUwBookStore = new JCheckBox("UW Book Store");
+        chckbxUwBookStore = new JCheckBox("UW Book Store");
         chckbxUwBookStore.setBounds(539, 622, 170, 29);
         chckbxUwBookStore.setEnabled(false);
         newBookFrame.getContentPane().add(chckbxUwBookStore);
 
-        JCheckBox chckbxPluBookStore = new JCheckBox("PLU Book Store");
+        chckbxPluBookStore = new JCheckBox("PLU Book Store");
         chckbxPluBookStore.setBounds(781, 580, 183, 29);
         chckbxPluBookStore.setEnabled(false);
         newBookFrame.getContentPane().add(chckbxPluBookStore);
 
-        JCheckBox chckbxUpsBookStore = new JCheckBox("UPS Book Store");
+        chckbxUpsBookStore = new JCheckBox("UPS Book Store");
         chckbxUpsBookStore.setBounds(781, 622, 170, 29);
         chckbxUpsBookStore.setEnabled(false);
         newBookFrame.getContentPane().add(chckbxUpsBookStore);
+
     }
 
     /**
@@ -273,7 +330,7 @@ public class NewBook {
         newBookFrame = new JFrame();
         newBookFrame.setTitle("Add a New Book");
         newBookFrame.setBounds(100, 100, 1044, 822);
-        newBookFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        newBookFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         newBookFrame.getContentPane().setLayout(null);
         newBookFrame.setResizable(false);
         final Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
