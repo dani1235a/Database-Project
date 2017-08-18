@@ -1,7 +1,7 @@
 .classpath
 .project
-/.idea
-/out
+.idea/
+out/
 *.class
 .idea
 .classpath
