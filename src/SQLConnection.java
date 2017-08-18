@@ -13,7 +13,6 @@ public class SQLConnection {
         myConnection = null;
         try {
             myConnection = DriverManager.getConnection(SQL_URL);
-            System.out.println("connected success");
         } catch (SQLException e) {
             System.out.println("Error connecting");
             e.printStackTrace();
