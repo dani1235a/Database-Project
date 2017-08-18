@@ -143,6 +143,7 @@ public class NewBook {
             }
 
             //TODO: Go to a JTable with just "select * from Books" so they can see the book there.
+
             new Table(connection);
             newBookFrame.dispose();
 
