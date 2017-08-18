@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bfc1442a-1288-4be5-b495-6f9bc5d7211e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Query.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Database Project/FindBook$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Database Project/FindBook$2.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Database Project/FindBook.class" afterPath="$PROJECT_DIR$/out/production/Database Project/FindBook.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Database Project/NewBook.class" afterPath="$PROJECT_DIR$/out/production/Database Project/NewBook.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/NewBook.java" afterPath="$PROJECT_DIR$/src/NewBook.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -691,7 +687,7 @@
       <workItem from="1502999119653" duration="938000" />
       <workItem from="1503000123201" duration="9953000" />
       <workItem from="1503088656007" duration="7555000" />
-      <workItem from="1503096288779" duration="1160000" />
+      <workItem from="1503096288779" duration="1310000" />
     </task>
     <task id="LOCAL-00001" summary="Adding a LookUpTable">
       <created>1502845973630</created>
@@ -777,11 +773,18 @@
       <option name="project" value="LOCAL" />
       <updated>1503096771072</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Modified Find Book - cleaned up code">
+      <created>1503097460758</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1503097460758</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57714000" />
+    <option name="totallyTimeSpent" value="57864000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2182" height="1416" extended-state="6" />
