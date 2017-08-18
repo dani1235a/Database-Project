@@ -59,12 +59,12 @@ public class Gui {
      * Add Find Button
      */
     private void addFindButton() {
-        JButton btnLookUp = new JButton("Find");
+        JButton btnLookUp = new JButton("Find A Book");
         btnLookUp.addActionListener(arg0 -> {
             new FindBook(connection);
             Startup.dispose();
         });
-        btnLookUp.setBounds(328, 102, 136, 52);
+        btnLookUp.setBounds(334, 156, 136, 52);
         Startup.getContentPane().add(btnLookUp);
     }
 
@@ -72,14 +72,14 @@ public class Gui {
      * Add NewBookButton
      */
     private void addNewBookButton() {
-        JButton btnNewBook = new JButton("New Book");
+        JButton btnNewBook = new JButton("Add New Book");
         btnNewBook.addActionListener(arg0 -> {
             // OPen new BOok Window
 
             new NewBook(connection);
             Startup.dispose();
         });
-        btnNewBook.setBounds(103, 102, 144, 52);
+        btnNewBook.setBounds(106, 156, 144, 52);
         Startup.getContentPane().add(btnNewBook);
     }
 
@@ -96,6 +96,16 @@ public class Gui {
         final Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         Startup.setLocation(dim.width / 2 - Startup.getSize().width / 2,
                 (int) (dim.getHeight() / 2 - Startup.getSize().height / 2));
+
+
+        JLabel lblWelcomeToThe = new JLabel("Welcome to the BookStore Database");
+        lblWelcomeToThe.setFont(new Font("Arial Black", Font.BOLD | Font.ITALIC, 18));
+        lblWelcomeToThe.setBounds(86, 16, 418, 34);
+        Startup.getContentPane().add(lblWelcomeToThe);
+
+        JLabel lblPleaseSelectAn = new JLabel("Please Select an option:");
+        lblPleaseSelectAn.setBounds(86, 89, 293, 34);
+        Startup.getContentPane().add(lblPleaseSelectAn);
     }
 
 }

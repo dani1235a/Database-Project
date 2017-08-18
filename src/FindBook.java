@@ -42,7 +42,7 @@ public class FindBook {
     private void initialize() {
         findFrame = new JFrame();
         findFrame.setTitle("Search By");
-        findFrame.setBounds(100, 100, 1044, 822);
+        findFrame.setBounds(100, 100, 710, 682);
         findFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         findFrame.getContentPane().setLayout(null);
         findFrame.setResizable(false);
@@ -51,23 +51,19 @@ public class FindBook {
                 (int) (dim.getHeight() / 2 - findFrame.getSize().height / 2));
         findFrame.setVisible(true);
         JButton btnSubmit = new JButton("Search");
-        btnSubmit.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent arg0) {
-
-            }
+        btnSubmit.addActionListener(e ->  {
+            //TODO: make query for SQLTable class
         });
-        btnSubmit.setBounds(861, 709, 115, 29);
+        btnSubmit.setBounds(500, 537, 115, 29);
         findFrame.getContentPane().add(btnSubmit);
 
         JButton btnCancel = new JButton("Cancel");
-        btnCancel.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent arg0) {
-                initGui();
-                findFrame.dispose();
+        btnCancel.addActionListener(arg0 -> {
+            initGui();
+            findFrame.dispose();
 
-            }
         });
-        btnCancel.setBounds(79, 709, 115, 29);
+        btnCancel.setBounds(35, 537, 115, 29);
         findFrame.getContentPane().add(btnCancel);
 
         txtTitle = new JTextField();
@@ -94,47 +90,11 @@ public class FindBook {
         findFrame.getContentPane().add(txtPrice);
         txtPrice.setColumns(10);
 
-        JLabel lblBookStoresThat = new JLabel("Stocked at:");
-        lblBookStoresThat.setBounds(35, 491, 204, 34);
-        findFrame.getContentPane().add(lblBookStoresThat);
-
-        JCheckBox chckbxBarnsAndNoble = new JCheckBox("Barns and Noble");
-        chckbxBarnsAndNoble.setBounds(35, 547, 170, 29);
-        findFrame.getContentPane().add(chckbxBarnsAndNoble);
-
-        JCheckBox chckbxAmazon = new JCheckBox("Amazon");
-        chckbxAmazon.setBounds(35, 597, 139, 29);
-        findFrame.getContentPane().add(chckbxAmazon);
-
-        JCheckBox chckbxBorders = new JCheckBox("Borders");
-        chckbxBorders.setBounds(284, 547, 139, 29);
-        findFrame.getContentPane().add(chckbxBorders);
-
-        JCheckBox chckbxHalfPriceBookvb = new JCheckBox("Half Price Books");
-        chckbxHalfPriceBookvb.setBounds(284, 597, 183, 29);
-        findFrame.getContentPane().add(chckbxHalfPriceBookvb);
-
-        JCheckBox chckbxPowells = new JCheckBox("Powells");
-        chckbxPowells.setBounds(539, 547, 139, 29);
-        findFrame.getContentPane().add(chckbxPowells);
-
-        JCheckBox chckbxUwBookStore = new JCheckBox("UW Book Store");
-        chckbxUwBookStore.setBounds(539, 597, 170, 29);
-        findFrame.getContentPane().add(chckbxUwBookStore);
-
-        JCheckBox chckbxNewCheckBox = new JCheckBox("PLU Book Store");
-        chckbxNewCheckBox.setBounds(781, 547, 183, 29);
-        findFrame.getContentPane().add(chckbxNewCheckBox);
-
-        JCheckBox chckbxUpsBookStore = new JCheckBox("UPS Book Store");
-        chckbxUpsBookStore.setBounds(781, 597, 170, 29);
-        findFrame.getContentPane().add(chckbxUpsBookStore);
 
         JLabel lblPublisher = new JLabel("Publisher:");
         lblPublisher.setBounds(35, 291, 115, 29);
         findFrame.getContentPane().add(lblPublisher);
 
-        ButtonGroup publisher = new ButtonGroup();
 
         txtPublishingDate = new JTextField();
         txtPublishingDate.setToolTipText("mm/dd/yyyy");
@@ -172,39 +132,35 @@ public class FindBook {
 
         JLabel lblGenre = new JLabel("Genre:");
         lblGenre.setFont(new Font("Tahoma", Font.PLAIN, 17));
-        lblGenre.setBounds(825, 31, 69, 20);
+        lblGenre.setBounds(501, 34, 69, 20);
         findFrame.getContentPane().add(lblGenre);
 
         JCheckBox chckbxFiction = new JCheckBox("Fiction");
-        chckbxFiction.setBounds(837, 70, 139, 29);
+        chckbxFiction.setBounds(500, 70, 139, 29);
         findFrame.getContentPane().add(chckbxFiction);
 
         JCheckBox chckbxNonfiction = new JCheckBox("Non-Fiction");
-        chckbxNonfiction.setBounds(837, 107, 139, 29);
+        chckbxNonfiction.setBounds(500, 107, 139, 29);
         findFrame.getContentPane().add(chckbxNonfiction);
 
         JCheckBox chckbxHorror = new JCheckBox("Horror");
-        chckbxHorror.setBounds(837, 143, 139, 29);
+        chckbxHorror.setBounds(500, 143, 139, 29);
         findFrame.getContentPane().add(chckbxHorror);
 
         JCheckBox chckbxScififantacy = new JCheckBox("Sci-Fi/Fantacy");
-        chckbxScififantacy.setBounds(837, 180, 139, 29);
+        chckbxScififantacy.setBounds(500, 180, 139, 29);
         findFrame.getContentPane().add(chckbxScififantacy);
 
         JCheckBox chckbxBiography = new JCheckBox("Biography");
-        chckbxBiography.setBounds(837, 217, 139, 29);
+        chckbxBiography.setBounds(500, 217, 139, 29);
         findFrame.getContentPane().add(chckbxBiography);
 
         JCheckBox chckbxEducation = new JCheckBox("Education");
-        chckbxEducation.setBounds(837, 254, 139, 29);
+        chckbxEducation.setBounds(500, 254, 139, 29);
         findFrame.getContentPane().add(chckbxEducation);
 
-        JCheckBox chckbxCooking = new JCheckBox("Cooking");
-        chckbxCooking.setBounds(837, 291, 139, 29);
-        findFrame.getContentPane().add(chckbxCooking);
-
         JCheckBox chckbxGraphicNovels = new JCheckBox("Graphic Novels");
-        chckbxGraphicNovels.setBounds(837, 332, 139, 29);
+        chckbxGraphicNovels.setBounds(500, 291, 139, 29);
         findFrame.getContentPane().add(chckbxGraphicNovels);
 
         JCheckBox chckbxPenguin = new JCheckBox("Penguin");
@@ -235,13 +191,13 @@ public class FindBook {
         lblListPrice.setBounds(35, 223, 69, 20);
         findFrame.getContentPane().add(lblListPrice);
 
-        JLabel lblKeyWords = new JLabel("Key Word");
-        lblKeyWords.setBounds(236, 226, 146, 20);
+        JLabel lblKeyWords = new JLabel("Key Word/Phrase from Description");
+        lblKeyWords.setBounds(236, 226, 200, 20);
         findFrame.getContentPane().add(lblKeyWords);
 
         textField = new JTextField();
         textField.setToolTipText("Search Book Description");
-        textField.setBounds(236, 249, 146, 26);
+        textField.setBounds(236, 249, 201, 111);
         findFrame.getContentPane().add(textField);
         textField.setColumns(10);
     }
